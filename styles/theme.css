@@ -1,0 +1,548 @@
+/* ============================================
+   Farm Typing Game - Theme Styles
+   Warm, hand-drawn watercolor aesthetic
+   ============================================ */
+
+:root {
+  /* ============================================
+     Color Palette - Earth Tones
+     ============================================ */
+  
+  /* Primary Earth Colors */
+  --color-earth-brown: #8B7355;
+  --color-earth-dark: #5D4037;
+  --color-earth-light: #A67C52;
+  
+  /* Natural Greens */
+  --color-grass-green: #7CB342;
+  --color-grass-dark: #558B2F;
+  --color-grass-light: #9CCC65;
+  --color-forest-green: #4a7c59;
+  
+  /* Sky & Water */
+  --color-sky-blue: #87CEEB;
+  --color-sky-light: #B0E0E6;
+  --color-sky-deep: #5BA3C6;
+  
+  /* Harvest Colors */
+  --color-wheat-gold: #DAA520;
+  --color-wheat-light: #F4D03F;
+  --color-wheat-dark: #B8860B;
+  
+  /* Wood Tones */
+  --color-wood-dark: #5D4037;
+  --color-wood-medium: #795548;
+  --color-wood-light: #8D6E63;
+  --color-wood-pale: #A1887F;
+  
+  /* Paper & Fabric */
+  --color-paper-cream: #FAF8F0;
+  --color-paper-tan: #E8DCC4;
+  --color-burlap: #D4C4A8;
+  --color-linen: #F5F5DC;
+  
+  /* Accent Colors */
+  --color-sunset-orange: #FF7F50;
+  --color-sunset-pink: #FFB6C1;
+  --color-twilight-purple: #8A2BE2;
+  --color-night-blue: #191970;
+  
+  /* ============================================
+     Time of Day Gradients
+     ============================================ */
+  
+  --gradient-morning: linear-gradient(
+    180deg, 
+    #FFE4B5 0%, 
+    #FFDAB9 30%,
+    #87CEEB 70%,
+    #ADD8E6 100%
+  );
+  
+  --gradient-afternoon: linear-gradient(
+    180deg, 
+    #87CEEB 0%, 
+    #ADD8E6 50%,
+    #B0E0E6 100%
+  );
+  
+  --gradient-evening: linear-gradient(
+    180deg, 
+    #FF7F50 0%, 
+    #FF6347 20%,
+    #DA70D6 50%,
+    #8A2BE2 100%
+  );
+  
+  --gradient-night: linear-gradient(
+    180deg, 
+    #191970 0%, 
+    #000033 50%,
+    #0C0C2E 100%
+  );
+  
+  /* ============================================
+     Shadows
+     ============================================ */
+  
+  --shadow-wood: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  --shadow-panel:
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  
+  --shadow-button:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  
+  --shadow-button-pressed:
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+  --shadow-card:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+  
+  --shadow-glow-gold:
+    0 0 10px rgba(255, 215, 0, 0.4),
+    0 0 20px rgba(255, 215, 0, 0.2);
+  
+  --shadow-glow-green:
+    0 0 10px rgba(76, 175, 80, 0.4),
+    0 0 20px rgba(76, 175, 80, 0.2);
+  
+  /* ============================================
+     Textures (CSS-based)
+     ============================================ */
+  
+  --texture-burlap: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 115, 85, 0.1) 2px,
+      rgba(139, 115, 85, 0.1) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(139, 115, 85, 0.1) 2px,
+      rgba(139, 115, 85, 0.1) 4px
+    );
+  
+  --texture-paper:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 5px,
+      rgba(0, 0, 0, 0.02) 5px,
+      rgba(0, 0, 0, 0.02) 10px
+    );
+  
+  --texture-wood-grain:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.05) 3px,
+      rgba(0, 0, 0, 0.05) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 20px,
+      rgba(0, 0, 0, 0.03) 20px,
+      rgba(0, 0, 0, 0.03) 25px
+    );
+  
+  --texture-linen:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+}
+
+/* ============================================
+   Wood Panel Style
+   ============================================ */
+
+.wood-panel {
+  background: var(--color-wood-light);
+  background-image: var(--texture-wood-grain);
+  border: 4px solid var(--color-wood-dark);
+  border-radius: 8px;
+  box-shadow: var(--shadow-wood);
+  position: relative;
+}
+
+.wood-panel::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  border-radius: 4px 4px 0 0;
+}
+
+/* Dark wood variant */
+.wood-panel-dark {
+  background: var(--color-wood-dark);
+  background-image: var(--texture-wood-grain);
+  border: 4px solid var(--color-earth-dark);
+  border-radius: 8px;
+  box-shadow: var(--shadow-wood);
+}
+
+/* ============================================
+   Burlap/Canvas Background
+   ============================================ */
+
+.burlap-bg {
+  background-color: var(--color-burlap);
+  background-image: var(--texture-burlap);
+}
+
+.linen-bg {
+  background-color: var(--color-linen);
+  background-image: var(--texture-linen);
+}
+
+.paper-bg {
+  background-color: var(--color-paper-cream);
+  background-image: var(--texture-paper);
+}
+
+/* ============================================
+   Handwritten Font Style
+   ============================================ */
+
+.handwritten {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.handwritten-title {
+  font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* ============================================
+   Farm Buttons
+   ============================================ */
+
+.farm-btn {
+  background: linear-gradient(
+    180deg,
+    var(--color-wood-light) 0%,
+    var(--color-wood-medium) 100%
+  );
+  background-image: var(--texture-wood-grain);
+  border: 3px solid var(--color-wood-dark);
+  border-radius: 8px;
+  box-shadow: var(--shadow-button);
+  color: var(--color-paper-cream);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.farm-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.farm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    var(--shadow-button),
+    0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.farm-btn:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-button-pressed);
+}
+
+/* Primary farm button (golden) */
+.farm-btn-primary {
+  background: linear-gradient(
+    180deg,
+    var(--color-wheat-light) 0%,
+    var(--color-wheat-gold) 100%
+  );
+  border-color: var(--color-wheat-dark);
+  color: var(--color-wood-dark);
+}
+
+/* Success farm button (green) */
+.farm-btn-success {
+  background: linear-gradient(
+    180deg,
+    var(--color-grass-light) 0%,
+    var(--color-grass-green) 100%
+  );
+  border-color: var(--color-grass-dark);
+  color: white;
+}
+
+/* ============================================
+   Farm Cards
+   ============================================ */
+
+.farm-card {
+  background: var(--color-paper-cream);
+  background-image: var(--texture-paper);
+  border: 3px solid var(--color-earth-brown);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 16px;
+  position: relative;
+}
+
+.farm-card::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border: 1px dashed rgba(139, 115, 85, 0.3);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+/* ============================================
+   Notification Badge
+   ============================================ */
+
+.farm-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-wheat-gold);
+  color: var(--color-wood-dark);
+  font-weight: bold;
+  font-size: 12px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  border: 2px solid var(--color-wheat-dark);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   Progress Bars
+   ============================================ */
+
+.farm-progress {
+  width: 100%;
+  height: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: 2px solid var(--color-earth-brown);
+  overflow: hidden;
+  position: relative;
+}
+
+.farm-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.farm-progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    transparent 100%
+  );
+}
+
+/* Growth progress */
+.farm-progress-growth .farm-progress-fill {
+  background: linear-gradient(
+    90deg,
+    var(--color-grass-dark) 0%,
+    var(--color-grass-green) 50%,
+    var(--color-grass-light) 100%
+  );
+}
+
+/* XP progress */
+.farm-progress-xp .farm-progress-fill {
+  background: linear-gradient(
+    90deg,
+    #9b59b6 0%,
+    #8e44ad 50%,
+    #a569bd 100%
+  );
+}
+
+/* Gold progress */
+.farm-progress-gold .farm-progress-fill {
+  background: linear-gradient(
+    90deg,
+    var(--color-wheat-dark) 0%,
+    var(--color-wheat-gold) 50%,
+    var(--color-wheat-light) 100%
+  );
+}
+
+/* ============================================
+   Tooltips
+   ============================================ */
+
+.farm-tooltip {
+  position: relative;
+}
+
+.farm-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: var(--color-wood-dark);
+  color: var(--color-paper-cream);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.farm-tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* ============================================
+   Dividers
+   ============================================ */
+
+.farm-divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--color-earth-brown) 20%,
+    var(--color-earth-brown) 80%,
+    transparent 100%
+  );
+  margin: 16px 0;
+  border: none;
+}
+
+.farm-divider-dashed {
+  height: 0;
+  border: none;
+  border-top: 2px dashed var(--color-earth-brown);
+  opacity: 0.5;
+  margin: 16px 0;
+}
+
+/* ============================================
+   Input Fields
+   ============================================ */
+
+.farm-input {
+  background: var(--color-paper-cream);
+  border: 3px solid var(--color-earth-brown);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 16px;
+  color: var(--color-wood-dark);
+  transition: all 0.2s ease;
+}
+
+.farm-input:focus {
+  outline: none;
+  border-color: var(--color-wheat-gold);
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.3);
+}
+
+.farm-input::placeholder {
+  color: var(--color-earth-light);
+  opacity: 0.7;
+}
+
+/* ============================================
+   Scrollbar Styling
+   ============================================ */
+
+.farm-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-earth-brown) var(--color-paper-tan);
+}
+
+.farm-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.farm-scroll::-webkit-scrollbar-track {
+  background: var(--color-paper-tan);
+  border-radius: 5px;
+}
+
+.farm-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-earth-brown);
+  border-radius: 5px;
+  border: 2px solid var(--color-paper-tan);
+}
+
+.farm-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-wood-dark);
+}
